@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_siswa/home.dart';
+import 'package:my_siswa/login/login.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -94,6 +95,22 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                   ),
                 ),
+              ),
+              SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Udah ada Akun?"),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => LoginPage()),
+                      );
+                    },
+                    child: Text("Login"),
+                  ),
+                ],
               ),
             ],
           ),

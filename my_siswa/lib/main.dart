@@ -28,7 +28,7 @@ class MainApp extends StatelessWidget {
               Text("Selamat Datang ke My SiswaKu"),
             ],
           ),
-          nextScreen: RegisterPage(),
+          nextScreen: LoginPage(),
           splashIconSize: 150,
           backgroundColor: Colors.white,
         ),
