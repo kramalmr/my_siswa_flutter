@@ -1,7 +1,7 @@
-
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:my_siswa/login/login.dart';
+import 'package:my_siswa/login/register.dart';
 
 void main() {
   runApp(const MainApp());
@@ -13,6 +13,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: AnimatedSplashScreen(
           splash: Column(
@@ -24,13 +25,12 @@ class MainApp extends StatelessWidget {
                   child: Image.asset("assets/mySiswa.png"),
                 ),
               ),
-              Text("Selamat Datang ke My SiswaKu", ),
+              Text("Selamat Datang ke My SiswaKu"),
             ],
           ),
-          nextScreen: Login(),
+          nextScreen: RegisterPage(),
           splashIconSize: 150,
           backgroundColor: Colors.white,
-          
         ),
       ),
     );
