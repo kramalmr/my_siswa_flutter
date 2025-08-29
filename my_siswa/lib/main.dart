@@ -1,5 +1,6 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:my_siswa/home.dart';
 import 'package:my_siswa/login/login.dart';
 import 'package:my_siswa/login/register.dart';
 
@@ -28,7 +29,7 @@ class MainApp extends StatelessWidget {
               Text("Selamat Datang ke My SiswaKu"),
             ],
           ),
-          nextScreen: LoginPage(),
+          nextScreen: HomePage(username: AutofillHints.username),
           splashIconSize: 150,
           backgroundColor: Colors.white,
         ),

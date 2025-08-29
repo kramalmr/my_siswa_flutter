@@ -70,7 +70,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     if (password == confirmPassword) {
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
+                        MaterialPageRoute(builder: (context) => HomePage(username: username)),
                       );
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(
