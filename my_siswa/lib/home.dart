@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_siswa/inbox.dart';
+import 'package:my_siswa/profile.dart';
+import 'package:my_siswa/school.dart';
 
 class HomePage extends StatefulWidget {
   final String username;
@@ -18,6 +20,7 @@ class _HomePageState extends State<HomePage> {
           "My Siswa",
           style: TextStyle(fontSize: 15, color: Colors.white),
         ),
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.blueAccent,
         actions: [
           IconButton(
@@ -66,7 +69,12 @@ class _HomePageState extends State<HomePage> {
               icon: Icon(Icons.home),
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SchoolPage()),
+                );
+              },
               color: Colors.white,
               icon: Icon(Icons.school),
             ),
@@ -77,7 +85,12 @@ class _HomePageState extends State<HomePage> {
               icon: Icon(Icons.calendar_month),
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProfilePage()),
+                );
+              },
               color: Colors.white,
               icon: Icon(Icons.person),
             ),
